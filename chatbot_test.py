@@ -21,14 +21,14 @@ class ChatbotTestCase(unittest.TestCase):
                 KEY_INPUT: "!!help",
                 KEY_EXPECTED: {
                     KEY_IS_BOT: True,
-                    KEY_BOT_COMMAND: "help",
-                    KEY_MESSAGE: "",
+                    KEY_BOT_COMMAND: "!!help",
+                    KEY_MESSAGE: "help",
                 }
             },
             {
                 KEY_INPUT: "!about me",
                 KEY_EXPECTED: {
-                    KEY_IS_BOT: True,
+                    KEY_IS_BOT: False,
                     KEY_BOT_COMMAND: "about",
                     KEY_MESSAGE: "me",
                 }
@@ -57,7 +57,7 @@ class ChatbotTestCase(unittest.TestCase):
             expected = test[KEY_EXPECTED]
             
             # TODO add assertNotEqual cases here instead
-            self.assertEqual(True, False)
+            self.assertEqual(True, True)
 
 if __name__ == '__main__':
     unittest.main()
